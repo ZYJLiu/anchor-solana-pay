@@ -8,7 +8,12 @@ import {
 } from "@solana/web3.js"
 import { getAssociatedTokenAddress } from "@solana/spl-token"
 import { Metaplex } from "@metaplex-foundation/js"
-import { Program, Provider, Idl, setProvider } from "@project-serum/anchor"
+import {
+  Program,
+  AnchorProvider,
+  Idl,
+  setProvider,
+} from "@project-serum/anchor"
 import { IDL, Nft } from "../program_idl"
 
 // setup
@@ -19,7 +24,7 @@ const MockWallet = {
 }
 
 const connection = new Connection(clusterApiUrl("devnet"))
-const provider = new Provider(connection, MockWallet, {})
+const provider = new AnchorProvider(connection, MockWallet, {})
 setProvider(provider)
 
 // Anchor Program setup
