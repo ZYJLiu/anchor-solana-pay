@@ -74,8 +74,10 @@ export default function Home() {
     <main className="container flex flex-col gap-20 items-center p-4 mx-auto min-h-screen justify-center">
       <div className="flex flex-col gap-8">
         <h1 className="text-3xl">Buy in your browser...</h1>
-        <div className="basis-1/4">
-          <WalletMultiButton />
+        <div className="basis-1/4 ">
+          <button>
+            <WalletMultiButton className="max-w-fit inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed" />
+          </button>
         </div>
         <button
           type="button"
