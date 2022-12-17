@@ -1,17 +1,20 @@
-import Head from 'next/head'
-import { AppProps } from 'next/app'
-import React from 'react';
-import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import { clusterApiUrl } from '@solana/web3.js';
-import '../styles/index.css'
+import Head from "next/head"
+import { AppProps } from "next/app"
+import React from "react"
+import {
+  ConnectionProvider,
+  WalletProvider,
+} from "@solana/wallet-adapter-react"
+import { WalletModalProvider } from "@solana/wallet-adapter-react-ui"
+import { clusterApiUrl } from "@solana/web3.js"
+import "../styles/index.css"
 
 // Default styles that can be overridden by your app
-require('@solana/wallet-adapter-react-ui/styles.css');
+require("@solana/wallet-adapter-react-ui/styles.css")
 
 function MyApp({ Component, pageProps }: AppProps) {
   // Connection endpoint, switch to a mainnet RPC if using mainnet
-  const ENDPOINT = clusterApiUrl('devnet')
+  const ENDPOINT = clusterApiUrl("devnet")
 
   return (
     <>
@@ -26,7 +29,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           </WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
-
     </>
   )
 }

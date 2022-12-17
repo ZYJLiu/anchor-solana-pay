@@ -14,7 +14,7 @@ import {
   Idl,
   setProvider,
 } from "@project-serum/anchor"
-import { IDL, Nft } from "../program_idl"
+import { IDL, Nft } from "../../idl/program_idl"
 
 // setup
 const MockWallet = {
